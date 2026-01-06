@@ -1,0 +1,35 @@
+body { margin: 0; font-family: 'Montserrat', sans-serif; background: #000; color: white; height: 100vh; overflow: hidden; }
+
+/* Intro */
+#intro { height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #FF6B6B, #556270); text-align: center; }
+button { padding: 15px 30px; font-size: 1.2rem; border-radius: 50px; border: none; font-weight: bold; cursor: pointer; margin-top: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+/* Diapositivas */
+.slide { position: absolute; top:0; left:0; width:100%; height:100%; display:none; flex-direction:column; justify-content:center; align-items:center; padding: 25px; box-sizing: border-box; text-align: center; background-size: cover; background-position: center; }
+.slide.active { display: flex; }
+
+/* Tipografía */
+h1 { font-size: 2.2rem; margin-bottom: 20px; font-weight: 900; }
+p { font-size: 1.2rem; line-height: 1.6; }
+.big-number { font-size: 4.5rem; font-weight: 900; color: #1DB954; margin: 10px 0; text-shadow: 3px 3px 0 #000; }
+.tiny-text { font-size: 0.8rem; opacity: 0.7; margin-top: 30px; }
+
+/* Fotos */
+.photo-frame img { width: 100%; max-height: 60vh; border: 8px solid white; border-bottom: 30px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.8); transform: rotate(-2deg); object-fit: cover; }
+
+/* ANIMACIÓN TEXTO QUE SE MUEVE (PÁGINA 1) */
+.marquee-container { width: 100%; overflow: hidden; white-space: nowrap; position: absolute; }
+.marquee-text { display: inline-block; font-size: 4rem; font-weight: 900; animation: scrollLeft 10s linear infinite; color: #E6B124; }
+@keyframes scrollLeft { from { transform: translateX(100vw); } to { transform: translateX(-100%); } }
+
+/* LISTA DE BARES (PÁGINA 5) */
+.bar-list { text-align: left; list-style: none; padding: 0; width: 100%; }
+.bar-list li { background: rgba(255,255,255,0.1); margin: 10px 0; padding: 15px; border-radius: 10px; font-weight: bold; }
+.bar-list li span { color: #E6B124; margin-right: 10px; }
+
+/* Barras */
+#progress-bar-container { position: absolute; top: 10px; width: 100%; display: flex; gap: 2px; padding: 0 5px; box-sizing: border-box; z-index: 10; }
+.bar { flex: 1; height: 3px; background: rgba(255,255,255,0.3); border-radius: 2px; }
+.fill { height: 100%; width: 0%; background: white; }
+.tap { position: absolute; top:0; height: 100%; width: 50%; z-index: 5; }
+.left { left: 0; } .right { right: 0; }
